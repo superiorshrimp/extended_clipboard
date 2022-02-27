@@ -1,7 +1,6 @@
-from PyQt5.Qt import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
+from PyQt5.Qt import Qt
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QListWidgetItem, QVBoxLayout, QLineEdit, QComboBox, QListWidget, QAbstractItemView, QGridLayout, QCheckBox, QPushButton, QShortcut
+from PyQt5.QtGui import QIcon, QFont, QKeySequence
 from config import *
 from datetime import datetime as dt
 import qdarkstyle
@@ -127,8 +126,6 @@ class MainWindow(QMainWindow):
         
         return header
     
-        pass
-    
     def createBottomLayout(self):
         bottom = QWidget()
         bottomLayout = QGridLayout()
@@ -157,7 +154,7 @@ class MainWindow(QMainWindow):
         ctrlvShortcut = QShortcut(QKeySequence('Ctrl+V'), self)
         ctrlvShortcut.activated.connect(self.paste)
         
-        ctrlaShortcut = QShortcut(QKeySequence('Ctrl+V'), self)
+        ctrlaShortcut = QShortcut(QKeySequence('Ctrl+A'), self)
         ctrlaShortcut.activated.connect(self.selectAll)
 
     def mergeMainLayout(self, mainLayout, header, bottom):
