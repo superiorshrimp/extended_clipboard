@@ -1,3 +1,0 @@
-mode=1
-width=302
-height=482

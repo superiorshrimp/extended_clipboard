@@ -1,0 +1,3 @@
+mode=1
+width=316
+height=706
